@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang=""en>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equib="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lo-Fi Food Ordering App Prototype</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/f886d34c9b.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="banner2">
+            <div><a href="maxarp.html"><i class="fa-solid fa-arrow-left-long"></i></a></div>
+            <div><a href="index.html"><i class="fa-solid fa-house"></i></a></div>
+            <div><a href="photographypf.html"><i class="fa-solid fa-arrow-right-long"></i></a></div>  
+        </div>
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/nfcapp.JPG" >
+                    </div>
+                    <div class="about-col-1">
+                        <h1 class="project-names">Low Fidelity Food Ordering App Prototype</h1>
+                        <p>Following research and participatory design principles, a low fidelity prototype was developed to ease item ordering and customization in restaurants/bars. The prototype is NFC dependent as opposed to internet dependent, to reduce dependency on larger infrastructures like the internet and increase reliability locally.</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Step 1</p>
+                            <p class="tab-links" onclick="opentab('experience')">Step 2</p>
+                            <p class="tab-links" onclick="opentab('education')">Step 3</p>
+                            <p class="tab-links" onclick="opentab('image4')">Step 4</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <img src="images/nfcappStep1.JPG">
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <img src="images/nfcappStep2.JPG">
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <img src="images/nfcappStep3.JPG">
+                        </div>
+                        <div class="tab-contents" id="image4">
+                            <img src="images/nfcappStep4.JPG">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p> Copyright &copy <script>document.write( new Date().getFullYear());</script> Abhishek Padhee</p>
+        </div>
+    
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+
+    </body>
+    </html>

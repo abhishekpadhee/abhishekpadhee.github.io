@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang=""en>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equib="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Max Arpeggiator</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/f886d34c9b.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="banner1">
+            <div><i class="fa-solid fa-arrow-left-long"></i></div>
+            <div><a href="index.html"><i class="fa-solid fa-house"></i></a></div>
+            <div><a href="nfcapp.html"><i class="fa-solid fa-arrow-right-long"></i></a></div>  
+        </div>
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/work-1.JPG" >
+                    </div>
+                    <div class="about-col-1">
+                        <h1 class="project-names">Arpeggiator using Arduino and Max/MSP</h1>
+                        <p>Using an Arduino Microcontroller and MAX/Msp Sequencer, this prototype allows users with all kinds of musical experience to experiment with various arpeggios with dynamic tempo control. Any VST of choice can be loaded into the max patch for the user.</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Technologies</p>
+                            <p class="tab-links" onclick="opentab('experience')">Working</p>
+                            <p class="tab-links" onclick="opentab('education')">Demo</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>C</span><br>Programming Controls on Arduino</li>
+                                <li><span>Max 8</span><br>Sequencing and VST Control</li>
+                                <li><span>Javascript</span><br>Controlling MIDI values to go into Max Sequencer</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <p> Using Serial Communication between the Arduino board and Max, we produce a string of values to be unpacked by the Max Sequencer.
+                                The string has 4 digital output results and 1 analog output result and follows the format:<br></br>
+                                StepUpFifth | StepDownFourth | MinorChOn | ToggleSequencer | Tempo<br></br>
+                                While the first 4 are digital Inputs, tempo is an analog output from 0 to 1023, mapped between 200 to 80 decerementally.
+                                The inverse mapping has been done so that the value can serve as time between notes.<br></br>
+                                <b>StepUpFifth</b>: Increase pitch of the arpeggio(raise it by an interval of perfect fifth)<br></br>
+
+                                <b>StepDownFourth</b> Decrease pitch of the arpeggio(decrease it by an interval of perfect fourth)<br></br>
+
+                                <b>MinrChOn</b>: Decreases the third and the seventh of the arpeggio by one to play a minor chord<br></br>
+
+                                <b>ToggleSequencer</b>: Switch on the max sequencer
+
+                            </p>
+
+                                                 
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <div class="iframe-container">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/mu59DQAIOjc?start=35" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p> Copyright &copy <script>document.write( new Date().getFullYear());</script> Abhishek Padhee</p>
+        </div>
+        
+        
+    
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+
+    </body>
+    </html>

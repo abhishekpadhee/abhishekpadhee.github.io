@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang=""en>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equib="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Time Travel FPS</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/f886d34c9b.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="banner3">
+            <div><a href="nfcapp.html"><i class="fa-solid fa-arrow-left-long"></a></i></div>
+            <div><a href="index.html"><i class="fa-solid fa-house"></i></a></div>
+            <div><i class="fa-solid fa-arrow-right-long"></i></div>  
+        </div>
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/TimeTravelFPS2.JPG" >
+                    </div>
+                    <div class="about-col-1">
+                        <h1 class="project-names">Time Travel First Person Shooter</h1>
+                        <p>This project is underway to enable a player to experience reality in a new way. A Universe where you can travel back and fourth in time. The tradeoff is that you cannot control the vertical dimension. The idea stems from the concept that in our world, time is the fourth unmanipulable dimension. This project aims to explore exchanging a manipulable dimension with one that you can manipulate. In this game, you can control the time dimension, but not the vertical(Y) dimension.</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Technologies</p>
+                            <p class="tab-links" onclick="opentab('experience')">Working</p>
+                            <p class="tab-links" onclick="opentab('education')">Demo</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Unity</span><br>Designing and laying out scenes and interfaces</li>
+                                <li><span>C#</span><br>Scripting behavior for gameobjects and scenes</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <p>Movement in the x and z directions remain same. No y movement is allowed. Instead of jumps, the player can dash left or right.<br></br>
+                                Time is rewinded by storing the vectors(x and z movement) and quaternions(x and z rotation) in a list. On holding the 'X' button, the data at the bottom of the list is removed, making the previous data point the new movement and rotation information. Data points are removed for a certain threshold(5 times). Since we are removing 5 data points, we can rewind 5 seconds back in time. For moving forward in time, we add random vectors and quaternions relative to current position.
+                            </p>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <div class="iframe-container">
+                                <div class="iframe-container">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/fP0ByS_ckYs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p> Copyright &copy <script>document.write( new Date().getFullYear());</script> Abhishek Padhee</p>
+        </div>
+       
+    
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+
+    </body>
+    </html>

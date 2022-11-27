@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang=""en>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equib="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Abhishek Padhee Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/f886d34c9b.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="images/logo2withoutBackground.png" class ="logo">
+                    <ul id="sidemenu">
+                        <li><a href='#header'> Home</a></li>
+                        <li><a href='#about'> About</a></li>
+                        <li><a href='#portfolio'> Portfolio</a></li>
+                        <li><a href='#contact'> Contact</a></li>
+                        <i class="fa-sharp fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                </nav>
+                <div class="header-text">
+                    <p>UI/UX Designer</p>
+                    <h1>Hi, I'm <span>Abhishek</span> from India.</h1>
+                </div>
+            </div>
+        </div>
+
+        <!-----------------------------------about------------------------------------------->
+
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/Aboutme.jpg" >
+                    </div>
+                    <div class="about-col-1">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>I am Abhishek, an engineer and UX designer from India, currently pursuing my masters from the University of Limerick, Ireland. Thank you for visiting this page. Please <a id="contact-link" href="#contact">contact</a> me to get in touch.</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>IxD/UX</span><br>Interaction Design for all kinds of products</li>
+                                <li><span>Prototyping</span><br>Vertical and Horizontal Prototyping for designs</li>
+                                <li><span>Development</span><br>Developing interfaces for products</li>
+                                
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>Tech Content Intern</span><br>Captain Tesseract - EdTech</li>
+                                <li><span>Tech Adoption Consultant</span><br>Pratiti Technologies - Product Dev</li>
+                                <li><span>Research Intern</span><br>MDI - Educational Institute</li>
+
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>ISC</span><br>Physics, Maths, Computer Science</li>
+                                <li><span>B.Tech</span><br>Information Technology</li>
+                                <li><span>MSc</span><br>Interaction and User Experience Design</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!---------------------------------------Services------------------------------->
+
+        <!--<div id="services">
+            <div class="container">
+                <h1 class="sub-title">My Services</h1>
+                <div class="services-list">
+                    <div>
+                        <i class="fa-solid fa-code"></i>
+                        <h2>Web Design</h2>
+                        <p>Web Design Service</p>
+                        <a href="#">Learn More</a>
+
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-crop"></i>
+                        <h2>UX Design</h2>
+                        <p>Web Design Service</p>
+                        <a href="#">Learn More</a>
+                        
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-app-store"></i>
+                        <h2>App Design</h2>
+                        <p>Web Design Service</p>
+                        <a href="#">Learn More</a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>--->
+
+        <!-------------Portfolio-------------------->
+
+        <div id="portfolio">
+            <div class="container">
+                <h1 class="sub-title">Some of My Work</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="images/work-1.JPG">
+                        <div class="layer">
+                            <h3>Max Arpeggiator</h3>
+                            <p>Arpeggiator</p>
+                            <a href="maxarp.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/nfcapp.JPG">
+                        <div class="layer">
+                            <h3>Lo-Fi Food Ordering App Prototype</h3>
+                            <p>App</p>
+                            <a href="nfcapp.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/TimeTravelFPS2.JPG">
+                        <div class="layer">
+                            <h3>Time Travel FPS (In Progress)</h3>
+                            <p>Unity 3D Development</p>
+                            <a href="photographypf.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    
+                <!--<a href="#" class="btn">See More</a>-->
+            </div>
+        </div>
+
+        <!--------------CONTACT---------------->
+        
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact me</h1>
+                        <p>abhiguitarp@gmail.com</p>
+                        <p>+353 899665194</p>
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/abhishek-padhee-857265194/"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                        <a href="images/background.jpg" download class="btn btn2">Download CV</a>
+                    </div>
+                    
+                    <div class="contact-right">
+                        <form name="submit-to-google-sheet">
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="Email" placeholder="Your email" required>
+                            <textarea name="Message" rows="6" placeholder="Your message"></textarea>
+                            <button type="submit" class="btn btn2">Submit</button>
+                        </form>
+                        <span id="msg"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p> Copyright &copy <script>document.write( new Date().getFullYear());</script> Abhishek Padhee</p>
+        </div>
+
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+
+        <script>
+            var sidemenu = document.getElementById("sidemenu");
+            function openmenu(){
+                sidemenu.style.right = "0";
+            }
+            function closemenu(){
+                sidemenu.style.right = "-200px";
+            }
+        </script>
+
+    
+  
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxOZjgUFr8O0vsu4ZlX7Ln72xYbrtGe_ab7mT6tU-2OmayrPWkewIoRSuXXVYsqxB5_kg/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg");
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML="Message Sent.";
+            setTimeout(function(){
+                msg.innerHTML=""
+            },2000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+    </body>
+</html>
